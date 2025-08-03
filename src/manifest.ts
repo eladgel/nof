@@ -16,7 +16,7 @@ export default defineManifest({
     service_worker: 'src/background/index.ts',
     type: 'module',
   },
-  options_page: 'src/options/index.html',
+  options_page: 'src/settings/index.html',
   action: {
     default_popup: 'src/popup/index.html',
     default_icon: {

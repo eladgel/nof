@@ -1,6 +1,10 @@
 import { JSX } from 'react';
 
 export default function Popup(): JSX.Element {
+  const openSettings = () => {
+    chrome.runtime.openOptionsPage();
+  };
+
   return (
     <div id='my-ext' className='container' data-theme='light'>
       <button type='button' className='btn btn-outline'>
@@ -14,6 +18,9 @@ export default function Popup(): JSX.Element {
       </button>
       <button type='button' className='btn btn-outline btn-accent'>
         Accent
+      </button>
+      <button type='button' className='btn btn-outline btn-info' onClick={openSettings}>
+        Settings
       </button>
     </div>
   );
