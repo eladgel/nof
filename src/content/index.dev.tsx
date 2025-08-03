@@ -31,5 +31,5 @@ shadowRoot.appendChild(styleElement);
 document.body.appendChild(container);
 
 // Render the application inside the shadow root
-const root = createRoot(shadowRoot);
-root.render(<Content />);
+// const root = createRoot(shadowRoot);
+// root.render(<Content />);
