@@ -18,9 +18,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: npm
+          cache: pnpm
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
       - name: Update versions and commit changes
         env:
@@ -72,7 +72,7 @@ jobs:
             --base main \
             --head "${BRANCH_NAME}"
 
-      - run: npm run build
+      - run: pnpm run build
 
       - name: Zip build output
         run: |

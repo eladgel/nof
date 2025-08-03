@@ -20,9 +20,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: npm
+          cache: pnpm
 
-      - run: npm ci --ignore-scripts
+      - run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Lint commit messages
         run: npx commitlint --from=${{ github.event.pull_request.base.sha || github.sha }} --to=${{ github.event.pull_request.head.sha || github.sha }}
