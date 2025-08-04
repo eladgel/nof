@@ -39,5 +39,12 @@ module.exports = {
         'no-console': 'off',
       },
     },
+    {
+      files: ['src/components/ui/card.tsx'],
+      rules: {
+        'react/jsx-props-no-spreading': 'off',
+        'jsx-a11y/heading-has-content': 'off',
+      },
+    },
   ],
 };
