@@ -1,3 +1,4 @@
+import { BANKS_LIST } from "@/consts/banks";
 import { useEffect, useState } from "react";
 
 export type TaseBank = {
@@ -16,10 +17,10 @@ export function useTaseBanks() {
     async function load() {
       try {
         setLoading(true);
-        const res = await fetch("/api/tase/banks");
-        if (!res.ok) throw new Error(`API ${res.status}`);
-        const banks: TaseBank[] = await res.json();
-        if (mounted) setData(banks);
+        // const res = await fetch("/api/tase/banks");
+        // if (!res.ok) throw new Error(`API ${res.status}`);
+        // const banks: TaseBank[] = await res.json();
+        if (mounted) setData(BANKS_LIST);
       } catch (e: unknown) {
         if (mounted) setError((e as Error).message ?? "Unknown error");
       } finally {

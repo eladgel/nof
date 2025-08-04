@@ -32,4 +32,12 @@ module.exports = {
       },
     },
   },
+  overrides: [
+    {
+      files: ['src/background/index.ts'],
+      rules: {
+        'no-console': 'off',
+      },
+    },
+  ],
 };

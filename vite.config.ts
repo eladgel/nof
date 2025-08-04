@@ -64,8 +64,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
-      '@utils': resolve(__dirname, './src/utils'),
+      '@api': resolve(__dirname, './src/api'),
       '@assets': resolve(__dirname, './src/assets'),
+      '@utils': resolve(__dirname, './src/utils'),
     },
   },
   build: {
