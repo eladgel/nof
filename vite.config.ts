@@ -53,6 +53,13 @@ export default defineConfig({
     cors: {
       origin: [/chrome-extension:\/\//],
     },
+    proxy: {
+      '/api/tase/banks': {
+        target: 'https://api.tase.co.il/api/commissions/loadcommissions',
+        changeOrigin: true,
+        rewrite: (p) => p.replace(/^\/api\/tase\/banks/, ''),
+      },
+    },
   },
   resolve: {
     alias: {

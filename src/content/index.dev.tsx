@@ -9,9 +9,7 @@
  * @module index.dev
  */
 
-import { createRoot } from 'react-dom/client';
 
-import Content from './Content';
 
 import '@assets/styles/index.css';
 
